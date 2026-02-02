@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🐷 Hey Pannikutty</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #fff5f7;
+  margin: 0;
+  text-align: center;
+}
+
+section {
+  display: none;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  color: #ff4d6d;
+}
+
+button {
+  padding: 15px 30px;
+  margin: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e63956;
+}
+
+.backBtn {
+  background: #555;
+}
+
+.gallery img, video {
+  width: 260px;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+audio {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎁 LANDING -->
+<section id="landing" style="display:block;">
+  <h1>🐷Hey Panni Its For You</h1>
+  <p>Click below… this is made just for you ❤️</p>
+  <button onclick="show('welcome')">Open Gift</button>
+</section>
+
+<!-- 👋 WELCOME -->
+<section id="welcome">
+  <h1>அட அட! வாங்க! வாங்க!, ஆச்சிமா! Chi Haaji Maa 💕</h1>
+  <p>
+    This is not just a website.<br>
+    It’s Under Cover Operation For U, it is covering some Memories, laughter, emotions… and YOU.
+  </p>
+  <button onclick="show('folders')">Continue</button>
+  <button class="backBtn" onclick="show('landing')">Back</button>
+</section>
+
+<!-- 🗂️ FOLDERS -->
+<section id="folders">
+  <h1>Choose a Folder 📂</h1>
+  <button onclick="show('PanniKutty')">😂 Panni kutty</button>
+  <button onclick="show('RoseMilk')">🌹🥛 Rose Milk</button>
+  <button onclick="show('TomJerry')">❤️ Tom & Jerry</button>
+  <button onclick="show('message')">💌 கொலு பொம்மை💖</button>
+  <button class="backBtn" onclick="show('welcome')">Back</button>
+</section>
+
+<section id="PanniKutty">
+  <h1>பன்னிக்குட்டி 🐷</h1>
+  <div class="gallery">
+    <img src="funny1.jpg">
+    <img src="funny2.jpg">
+  </div>
+  <button class="backBtn" onclick="show('folders')">Back</button>
+</section>
+
+<section id="RoseMilk">
+  <h1>🌹🥛 ரோஸ் மில்க் ஆஹ்!</h1>
+  <div class="gallery">
+    <img src="travel1.jpg">
+  </div>
+  <button class="backBtn" onclick="show('folders')">Back</button>
+</section>
+
+<section id="TomJerry">
+  <h1>❤️ Tom & Jerry</h1>
+  <div class="gallery">
+    <img src="heart1.jpg">
+  </div>
+  <button class="backBtn" onclick="show('folders')">Back</button>
+</section>
+
+
+<!-- 💌 MESSAGE -->
+<section id="message">
+  <h1>💌 A Message For You</h1>
+  <p>
+    Hey Hajuuu,<br><br>
+    லேடி சூப்பர் ஸ்டார் Hajira வாழ்க 🎉✨
+    உலக அழகி Hajira வாழ்க 🌟✨
+    Ok, Wake up from the dream😄 Summa Lololaikiii...
+    Thank you for being my best & Bestestestessstttt friend — my favorite chapter & laughter,
+    my பிரியமான தோழி 😄❤️<br><br>
+    Life is better, funnier, and warmer with you in it.
+    This little  is just a reminder of how special you are. ANDDDD Heyy Hajuu
+    என் சாமி நீதானடி...என் சாவி நீதானடி...என் சாபம் நீதானடி...என் சாந்தி நீதானடி...
+  </p>
+
+  <audio controls>
+    <source src="podcast.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="backBtn" onclick="show('folders')">Back</button>
+</section>
+
+<script>
+function show(id) {
+  document.querySelectorAll("section").forEach(s => s.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>
